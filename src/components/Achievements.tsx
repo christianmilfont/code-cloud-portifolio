@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Award, GraduationCap, Cloud, Code2, Globe, FileCode, Database, Layers, GitBranch } from "lucide-react";
 
 const certifications = [
+  // AWS
   {
     icon: Cloud,
     title: "AWS re/Start Graduate",
@@ -9,6 +10,77 @@ const certifications = [
     year: "2024",
     category: "Cloud",
   },
+
+  // FIAP - 2025
+  {
+    icon: Code2,
+    title: "Desenvolvimento de Aplicações Móveis",
+    issuer: "FIAP — 2TDSPM",
+    year: "2025",
+    category: "Bronze",
+  },
+  {
+    icon: Layers,
+    title: "Estratégia e Inovação Tecnológica (IA & IoT)",
+    issuer: "FIAP — 2TDSPM",
+    year: "2025",
+    category: "Prata",
+  },
+
+  // FIAP - 2024
+  {
+    icon: Globe,
+    title: "Desenvolvimento e Design Web 2.0",
+    issuer: "FIAP — 1TDSPK",
+    year: "2024",
+    category: "Bronze",
+  },
+  {
+    icon: FileCode,
+    title: "Análise de Sistemas e Prototipação Web",
+    issuer: "FIAP — 1TDSPK",
+    year: "2024",
+    category: "Bronze",
+  },
+
+  // Certificações gerais
+  {
+    icon: Database,
+    title: "Blockchain",
+    issuer: "Certificação Profissional",
+    year: "2024",
+    category: "Tech",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Fundamentals, Administration & Solution Architect",
+    issuer: "Certificação Profissional",
+    year: "2024",
+    category: "Cloud",
+  },
+  {
+    icon: Layers,
+    title: "Design Thinking - Process",
+    issuer: "Certificação Profissional",
+    year: "2024",
+    category: "Process",
+  },
+  {
+    icon: GitBranch,
+    title: "DevOps",
+    issuer: "Certificação Profissional",
+    year: "2024",
+    category: "DevOps",
+  },
+  {
+    icon: Globe,
+    title: "Formação Social e Sustentabilidade",
+    issuer: "Certificação Profissional",
+    year: "2024",
+    category: "Social",
+  },
+
+  // Alura (mantidos)
   {
     icon: Code2,
     title: "Performance Web I: otimizando o front-end",
@@ -25,56 +97,35 @@ const certifications = [
   },
   {
     icon: Database,
-    title: "JavaScript: salvando dados localmente com IndexedDB",
+    title: "IndexedDB",
     issuer: "Alura",
     year: "Ago 2020",
     category: "JavaScript",
   },
   {
     icon: FileCode,
-    title: "JavaScript: projeto de conclusão",
+    title: "Projeto JavaScript",
     issuer: "Alura",
     year: "Jul 2020",
     category: "JavaScript",
   },
   {
     icon: FileCode,
-    title: "JavaScript: programando na linguagem da web",
+    title: "JavaScript Web",
     issuer: "Alura",
     year: "Jun 2020",
     category: "JavaScript",
   },
   {
     icon: Layers,
-    title: "HTML5 e CSS3 parte 4: avançando no CSS",
+    title: "HTML & CSS Avançado",
     issuer: "Alura",
-    year: "Fev 2023",
-    category: "Front-end",
-  },
-  {
-    icon: Layers,
-    title: "HTML5 e CSS3 parte 3: formulários e tabelas",
-    issuer: "Alura",
-    year: "Fev 2023",
-    category: "Front-end",
-  },
-  {
-    icon: Layers,
-    title: "HTML5 e CSS3 parte 2: posicionamento e navegação",
-    issuer: "Alura",
-    year: "Fev 2023",
-    category: "Front-end",
-  },
-  {
-    icon: Layers,
-    title: "HTML5 e CSS3 parte 1: crie uma página da Web",
-    issuer: "Alura",
-    year: "Fev 2023",
+    year: "2023",
     category: "Front-end",
   },
   {
     icon: GitBranch,
-    title: "Git e GitHub: controle e compartilhe seu código",
+    title: "Git & GitHub",
     issuer: "Alura",
     year: "Ago 2023",
     category: "Ferramentas",
@@ -171,9 +222,17 @@ const Achievements = () => {
                   </div>
                   <span className="font-mono text-[10px] text-muted-foreground">{item.year}</span>
                 </div>
-                <p className="font-mono text-[10px] text-primary mb-2 uppercase tracking-wider">
-                  {item.category}
-                </p>
+                <p
+                      className={`font-mono text-[10px] mb-2 uppercase tracking-wider ${
+                      item.category === "Prata"
+                        ? "text-gray-300"
+                        : item.category === "Bronze"
+                        ? "text-amber-500"
+                        : "text-primary"
+                    }`}
+                  >
+                    {item.category}
+              </p>
                 <h3 className="text-sm sm:text-base font-semibold mb-1.5 leading-snug">
                   {item.title}
                 </h3>
