@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#/sobre", label: "Sobre" },
-  { href: "#/skills", label: "Skills" },
-  { href: "#/conquistas", label: "Conquistas" },
-  { href: "#/experiencia", label: "Experiência" },
-  { href: "#/contato", label: "Contato" },
+  { href: "#sobre", label: "Sobre" },
+  { href: "#skills", label: "Skills" },
+  { href: "#conquistas", label: "Conquistas" },
+  { href: "#experiencia", label: "Experiência" },
+  { href: "#contato", label: "Contato" },
 ];
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
 
-  useEffect(() => {
+   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
@@ -24,7 +24,7 @@ const Navbar = () => {
   // Track active section
   useEffect(() => {
   const sections = links
-    .map((l) => document.querySelector(l.href.replace("#/", "#")))
+    .map((l) => document.querySelector(l.href))
     .filter(Boolean) as Element[];
     if (!sections.length) return;
 

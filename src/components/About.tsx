@@ -12,13 +12,13 @@ const milestones = [
     icon: Code2,
     year: "A jornada",
     title: "Aprendizado constante",
-    text: "Mergulhei em desenvolvimento web, depois em backend e bancos de dados. Cada projeto, um problema novo para resolver — e foi aí que percebi que isso era pra mim.",
+    text: "Mergulhei em desenvolvimento web, depois em backend e bancos de dados. Cada projeto, um problema novo para resolver — e foi aí que percebi que além do código, eu precisaria estabelcer uma conduta de controle, utilizando meus conhecimentos de Observabilidade e Segurança da Informação, em pról de garantir um produto que agregue valor.",
   },
   {
     icon: Rocket,
     year: "Hoje",
     title: "Cloud, IA & escala",
-    text: "Hoje trabalho construindo soluções em nuvem, integrando inteligência artificial e desenhando arquiteturas que aguentam crescer. O foco é entregar valor real.",
+    text: "Hoje me dedico a desenvolver soluções em nuvem, integrando inteligência artificial e desenhando arquiteturas com análise e observabilidade para que meus projetos  aguentem crescer. O foco é entregar valor real.",
   },
 ];
 

@@ -9,6 +9,12 @@ const categories = [
     items: ["AWS", "Azure", "Docker", "Kubernetes", "Terraform", "CI/CD"],
   },
   {
+    icon: Wrench,
+    title: "DevOps",
+    color: "text-accent",
+    items: ["Git", "Linux", "VS Code", "Postman", "Figma", "Notion"],
+  },
+  {
     icon: Brain,
     title: "IA & Machine Learning",
     color: "text-accent",
