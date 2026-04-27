@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, GraduationCap, Cloud, Code2, Globe, FileCode, Database, Layers, GitBranch } from "lucide-react";
+import premiacaoImg from "@/assets/foto-premio.jpeg";
 
 const certifications = [
   // AWS
@@ -173,21 +174,48 @@ const Achievements = () => {
           <p className="font-mono text-xs text-primary mb-4 uppercase tracking-wider">
             // formação acadêmica
           </p>
-          <div className="glass rounded-xl p-6 sm:p-7 border-l-2 border-l-primary/70 hover:border-l-primary transition-colors">
-            <div className="flex items-start gap-4 sm:gap-5">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground">
-                <education.icon className="h-5 w-5" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-                  <h3 className="text-lg sm:text-xl font-semibold">{education.institution}</h3>
-                  <span className="font-mono text-xs text-muted-foreground">{education.period}</span>
-                </div>
-                <p className="text-sm sm:text-base text-foreground/90 mb-2">{education.course}</p>
-                <p className="text-sm text-muted-foreground">{education.details}</p>
-              </div>
-            </div>
-          </div>
+          <div className="glass rounded-xl p-6 sm:p-7 border-l-2 border-l-primary/70 hover:border-l-primary transition-all duration-300">
+  <div className="grid md:grid-cols-2 gap-6 items-center">
+    
+    {/* TEXTO */}
+    <div className="flex items-start gap-4 sm:gap-5">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground">
+        <education.icon className="h-5 w-5" />
+      </div>
+
+      <div className="flex-1 min-w-0">
+        <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+          <h3 className="text-lg sm:text-xl font-semibold">
+            {education.institution}
+          </h3>
+          <span className="font-mono text-xs text-muted-foreground">
+            {education.period}
+          </span>
+        </div>
+
+        <p className="text-sm sm:text-base text-foreground/90 mb-2">
+          {education.course}
+        </p>
+
+        <p className="text-sm text-muted-foreground">
+          {education.details}
+        </p>
+      </div>
+    </div>
+
+    {/* IMAGEM */}
+    <div className="relative group">
+      <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary/40 via-purple-500/40 to-blue-500/40 blur opacity-50 group-hover:opacity-100 transition duration-500"></div>
+
+      <img
+        src={premiacaoImg}
+        alt="Premiação acadêmica"
+        className="relative rounded-xl border border-border shadow-xl object-cover w-full h-56 sm:h-64 group-hover:scale-[1.02] transition-transform duration-300"
+      />
+    </div>
+
+  </div>
+</div>
         </motion.div>
 
         {/* Certificações */}
