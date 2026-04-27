@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#skills", label: "Skills" },
-  { href: "#conquistas", label: "Conquistas" },
-  { href: "#experiencia", label: "Experiência" },
-  { href: "#contato", label: "Contato" },
+  { href: "#/sobre", label: "Sobre" },
+  { href: "#/skills", label: "Skills" },
+  { href: "#/conquistas", label: "Conquistas" },
+  { href: "#/experiencia", label: "Experiência" },
+  { href: "#/contato", label: "Contato" },
 ];
 
 const Navbar = () => {
@@ -23,9 +23,9 @@ const Navbar = () => {
 
   // Track active section
   useEffect(() => {
-    const sections = links
-      .map((l) => document.querySelector(l.href))
-      .filter(Boolean) as Element[];
+  const sections = links
+    .map((l) => document.querySelector(l.href.replace("#/", "#")))
+    .filter(Boolean) as Element[];
     if (!sections.length) return;
 
     const observer = new IntersectionObserver(

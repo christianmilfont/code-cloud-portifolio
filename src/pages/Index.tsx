@@ -8,14 +8,29 @@ import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main id="top" className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Achievements />
-      <Experience />
-      <Contact />
+
+      <section id="sobre">
+        <Hero />
+        <About />
+      </section>
+
+      <section id="skills">
+        <Skills />
+      </section>
+
+      <section id="conquistas">
+        <Achievements />
+      </section>
+
+      <section id="experiencia">
+        <Experience />
+      </section>
+
+      <section id="contato">
+        <Contact />
+      </section>
     </main>
   );
 };
