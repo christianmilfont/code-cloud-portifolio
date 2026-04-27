@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Award, GraduationCap, Cloud, Code2, Globe, FileCode, Database, Layers, GitBranch } from "lucide-react";
 import premiacaoImg from "@/assets/foto-premio.jpeg";
+import ImageModal from "@/components/ImageModal";
+import { useState } from "react";
 
 const certifications = [
   // AWS
@@ -142,6 +144,7 @@ const education = {
 };
 
 const Achievements = () => {
+  const [openImage, setOpenImage] = useState(false);
   return (
     <section id="conquistas" className="py-20 sm:py-28 relative">
       <div className="container">
@@ -204,15 +207,17 @@ const Achievements = () => {
     </div>
 
     {/* IMAGEM */}
-    <div className="relative group">
-      <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary/40 via-purple-500/40 to-blue-500/40 blur opacity-50 group-hover:opacity-100 transition duration-500"></div>
+   <div
+  className="relative group cursor-zoom-in"
+  onClick={() => setOpenImage(true)}
+>
 
-      <img
-        src={premiacaoImg}
-        alt="Premiação acadêmica"
-        className="relative rounded-xl border border-border shadow-xl object-cover w-full h-56 sm:h-64 group-hover:scale-[1.02] transition-transform duration-300"
-      />
-    </div>
+  <img
+    src={premiacaoImg}
+    alt="Premiação acadêmica"
+    className="relative max-h-64 w-auto object-contain rounded-lg border border-border shadow-lg"
+  />
+</div>
 
   </div>
 </div>
@@ -270,8 +275,16 @@ const Achievements = () => {
           </div>
         </motion.div>
       </div>
+      <ImageModal
+  open={openImage}
+  onClose={() => setOpenImage(false)}
+  src={premiacaoImg}
+/>
     </section>
+    
   );
+
+  
 };
 
 export default Achievements;
