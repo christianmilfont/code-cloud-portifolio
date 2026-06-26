@@ -25,7 +25,7 @@ const Contact = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <a
-              href="mailto:contato@exemplo.com"
+              href="mailto:christian@milfont.org"
               className="inline-flex items-center gap-3 font-mono text-xs sm:text-sm px-5 sm:px-6 py-3 sm:py-4 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition glow-primary break-all"
             >
               <Mail className="h-5 w-5" />
@@ -43,8 +43,8 @@ const Contact = () => {
 
           <div className="flex items-center justify-center gap-6 mt-10">
             {[
-              { Icon: Github, label: "GitHub", href: https://github.com/christianmilfont },
-              { Icon: Linkedin, label: "LinkedIn", href: https://www.linkedin.com/in/christianmilfont },
+              { Icon: Github, label: "GitHub", href: "https://github.com/christianmilfont" },
+              { Icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/christianmilfont" },
             ].map(({ Icon, label, href }) => (
               <a
                 key={label}
