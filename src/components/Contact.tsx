@@ -43,8 +43,8 @@ const Contact = () => {
 
           <div className="flex items-center justify-center gap-6 mt-10">
             {[
-              { Icon: Github, label: "GitHub", href: "#" },
-              { Icon: Linkedin, label: "LinkedIn", href: "#" },
+              { Icon: Github, label: "GitHub", href: https://github.com/christianmilfont },
+              { Icon: Linkedin, label: "LinkedIn", href: https://www.linkedin.com/in/christianmilfont },
             ].map(({ Icon, label, href }) => (
               <a
                 key={label}
